@@ -1,7 +1,8 @@
 package com;
 
 public class Batch 
-{
+{  
+	//simple
 	private int bid;
 	private String bname;
 	private String tname;
