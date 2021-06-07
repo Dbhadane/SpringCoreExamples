@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+  <bean id="g" class="com.t1.Grade">
+   <property name="gtype" value="A+"></property>
+   </bean>
+  
+    
+   <bean id="m1" class="com.t1.Student">
+   <constructor-arg index="0" value="Dinesh"></constructor-arg>
+   <constructor-arg index="1" value="01"></constructor-arg>
+   <constructor-arg index="2" ref="g"></constructor-arg>
+   </bean>
+   
+   <bean id="payment" class="com.t1.Payment" autowire="byType">
+   <property name="Price" value="1000"></property>
+ 
+   </bean>
+   <bean id="cc" class="com.t1.Order">
+   <property name="item" value="lapy"></property>
+   <property name="address" value="Pune"></property>
+   
+   </bean>
+   
+    <bean id="payment1" class="com.t1.Payment" >
+   <property name="Price" value="1000"></property>
+   <property name="order">
+   <bean class="com.t1.Order">
+   <property name="item" value="lapy"></property>
+   <property name="address" value="Pune"></property>
+   
+   </bean>
+   
+   </property>
+ </bean>
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  </beans>

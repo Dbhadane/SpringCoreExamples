@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+   
+    <bean id="b" class="com.Batch" autowire-candidate="false">
+		<property name="bid" value="01"></property>
+		<property name="bname" value="java"></property>
+		<property name="tname" value="Db"></property>
+	</bean>
+	<bean id="bb" class="com.Batch">
+		<property name="bid" value="01"></property>
+		<property name="bname" value="Sql"></property>
+		<property name="tname" value="Db"></property>
+	</bean>
+	<bean id="h1" class="com.HelloWorld" autowire="byType">
+		<constructor-arg value="2"></constructor-arg>
+		<constructor-arg value="Rinku"></constructor-arg>
+		<!-- <constructor-arg ref="b1"></constructor-arg> -->
+	</bean>
+
+	<bean id="ss" class="com.t1.Hello">
+		<property name="message" value="Dinu-->"></property>
+	</bean>
+	<bean id="qq" class="com.t1.ByeBye">
+		<property name="message" value="Dnyaneshwar-->"></property>
+	</bean>
+  
+ 
+
+
+</beans>  
+ 
+ 
